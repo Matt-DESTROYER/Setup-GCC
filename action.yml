@@ -1,5 +1,5 @@
-name: "Setup GCC"
-description: "Set's up the GCC compiler for a runner."
+name: "GCC"
+description: "Automatically sets up the GCC compiler for a runner."
 
 runs:
   using: "composite"
