@@ -5,5 +5,12 @@ runs:
   using: "composite"
   steps:
     - name: Install GCC
-      run: bash ./main.sh
+      run: |
+        if [[ $RUNNER_OS == Linux* ]]; then
+          sudo apt install -y build-essential
+        elif [[ $RUNNER_OS == Windows* ]]; then
+          choco install mingw
+        elif [[ $RUNNER_OS == macOS* ]]; then
+          brew install gcc
+        else
       shell: bash
