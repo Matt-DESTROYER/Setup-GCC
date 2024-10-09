@@ -1,3 +1,3 @@
-# Setup-GCC
+# Use GCC
 
-Installs GCC on a runner.
+Automatically installs `gcc` on your runner, ready to be used for compilation.
