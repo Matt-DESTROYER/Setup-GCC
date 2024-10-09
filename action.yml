@@ -6,6 +6,7 @@ runs:
   steps:
     - name: Install GCC
       run: |
+        echo Attempting to install gcc for $RUNNER_OS
         if [[ $RUNNER_OS == Linux* ]]; then
           sudo apt install -y build-essential
         elif [[ $RUNNER_OS == Windows* ]]; then
@@ -13,4 +14,8 @@ runs:
         elif [[ $RUNNER_OS == macOS* ]]; then
           brew install gcc
         else
+          echo Unsupported OS detected: $RUNNER_OS
+          exit 1
+        fi
+        echo Installed successfully
       shell: bash
