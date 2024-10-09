@@ -5,5 +5,5 @@ runs:
   using: "composite"
   steps:
     - name: Install GCC
-      run: bash ./scripts/main.sh
+      run: bash ./main.sh
       shell: bash
