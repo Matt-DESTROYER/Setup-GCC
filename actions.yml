@@ -1,0 +1,11 @@
+name: "Setup GCC"
+description: "Set's up the GCC compiler for a runner."
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install GCC
+      run: |
+        cd ./scripts
+        bash ./main.sh
+      shell: bash
