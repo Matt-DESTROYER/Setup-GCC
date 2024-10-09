@@ -1,8 +1,8 @@
-name: "GCC"
-description: "Automatically sets up the GCC compiler for a runner."
+name: Use GCC
+description: Sets up the GCC compiler for a runner.
 
 runs:
-  using: "composite"
+  using: composite
   steps:
     - name: Install GCC
       run: |
@@ -19,3 +19,7 @@ runs:
         fi
         echo Installed successfully
       shell: bash
+
+branding:
+  icon: box
+  color: blue
