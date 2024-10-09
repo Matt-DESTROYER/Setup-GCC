@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bash ./$RUNNER_OS.sh
+bash ./scripts/$RUNNER_OS.sh
