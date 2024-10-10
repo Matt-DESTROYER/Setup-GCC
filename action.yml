@@ -8,15 +8,10 @@ runs:
       run: |
         echo Attempting to install gcc for $RUNNER_OS
         if [[ $RUNNER_OS == Linux* ]]; then
-          sudo apt update
-          sudo apt install build-essential
-          sudo apt install gcc g++ -y
+          sudo apt install -y build-essential
         elif [[ $RUNNER_OS == Windows* ]]; then
-          choco upgrade all
           choco install mingw
         elif [[ $RUNNER_OS == macOS* ]]; then
-          brew update
-          brew upgrade
           brew install gcc
         else
           echo Unsupported OS detected: $RUNNER_OS
